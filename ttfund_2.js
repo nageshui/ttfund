@@ -2,7 +2,7 @@
 // @name         天天基金实时净值
 // @description  根据天天基金页面提供的股票持仓计算预估涨幅，不代表真实涨幅
 // @namespace    http://tampermonkey.net/
-// @version      2.2
+// @version      2.4
 // @author       You
 // @match        https://fund.eastmoney.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
