@@ -2,7 +2,7 @@
 // @name         天天基金实时净值
 // @description  根据天天基金页面提供的股票持仓计算预估涨幅，不代表真实涨幅
 // @namespace    http://tampermonkey.net/
-// @version      2.4
+// @version      2.5
 // @author       You
 // @match        https://fund.eastmoney.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
@@ -63,6 +63,17 @@
         if (data) {
             span_1.textContent = data.gsz;
             span_2.textContent = data.gszzl + '%';
+            span_2.classList.remove('ui-color-green')
+            span_2.classList.remove('ui-color-red')
+            span_1.classList.remove('ui-color-green')
+            span_1.classList.remove('ui-color-red')
+            if (data.gszzl.includes('-')) {
+                span_2.classList.add("ui-color-green")
+                span_1.classList.add("ui-color-green")
+            } else {
+                span_2.classList.add("ui-color-red")
+                span_1.classList.add("ui-color-red")
+            }
         }
     }
 
